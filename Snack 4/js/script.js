@@ -27,6 +27,8 @@ Bonus
 Visualizzare nell’html questi dati in una forma tabellare.
 */
 
+var result = document.getElementById("result");
+
 var students = [
     {
         name: "Antonio",
@@ -48,11 +50,12 @@ var students = [
     }
 ]
 
-console.log(students);
+console.log("Questi gli array dei dati PRIMA di aver inserito una descrizione: ", students);
 
 for(var i = 0; i < students.length; i++) {
     var userDescription = prompt("Inserisci una descrizione")
     students[i].description = userDescription;
+    result.innerHTML += students[i].name + "<br>" + students[i].surname + "<br>" + students[i].age + "<br>" + students[i].description + "<hr>";  
 }
 
-console.log(students);
+console.log("Questi gli array dei dati DOPO aver inserito la descrizione: ", students);
